@@ -2,6 +2,11 @@
 
 ## Mathematical Derivation of PID Controller
 
+![PID Mechanism Block Diagram](pid-mechanism.png)
+*Figure: Block diagram of the PID control feedback loop.*
+
+A PID (Proportional-Integral-Derivative) controller is a feedback control loop mechanism widely used in industrial control systems. The controller continuously calculates an error value $e(t)$ as the difference between a desired setpoint $r(t)$ and a measured process variable $y(t)$. The controller applies a correction based on proportional, integral, and derivative terms:
+
 A PID (Proportional-Integral-Derivative) controller is a feedback control loop mechanism widely used in industrial control systems. The controller continuously calculates an error value $e(t)$ as the difference between a desired setpoint $r(t)$ and a measured process variable $y(t)$. The controller applies a correction based on proportional, integral, and derivative terms:
 
 $$
@@ -33,13 +38,23 @@ $$
 
 The integral term increases convergence speed and reduces steady-state error. If the set pressure is above the actual pressure, the controller reduces the output voltage, decreasing the mass flow and increasing the pressure in the cryostat.
 
-*See diagram below for hardware setup:*
+*See diagrams below for hardware setup:*
+
+![PID Wiring Schematic](pid-wiring.png)
+*Figure: Physical wiring schematic for the PID controller system.*
 
 ![PID Controller Schematic.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/6eed0180-51e9-457f-9105-0dc87954e9f8/0ae676a1-7b4c-437e-a0d8-b2c24c101797/PID_Controller_Schematic.jpg)
 
 ---
 
 ## Explanation of Sierra Mass Flow Controller (MFC)
+
+![Heating Coil in MFC Sensor](heating-coil.png)
+*Figure: Heating coil arrangement in the capillary sensor of the MFC.*
+
+![Mass Flow Principle](massflow.png)
+*Figure: Schematic showing the mass flow and heat transfer in the MFC.*
+
 
 The Sierra MFC measures and controls the mass flow of gas using a capillary thermal method. A small fraction of the gas is diverted through a sensor tube with two identical heating coils. When no flow occurs, both coils are at the same temperature. When gas flows, it carries heat from the upstream coil to the downstream coil, creating a temperature differential. This differential is proportional to the mass flow rate:
 
@@ -103,6 +118,13 @@ This controller regulates the outflow pressure from a gas cylinder (argon or nit
 - `Arduino_Code/` — Arduino programs for PID and device control
 - `Debug/` — Test scripts for component verification
 - `System_Control/` — Python scripts for system-level control and integration
+
+---
+
+## About the Team
+
+![Team Photo](team-pic.png)
+*Figure: The Giovanetti Lab team working on the PID and MFC project.*
 
 ---
 
