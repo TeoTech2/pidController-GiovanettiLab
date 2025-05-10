@@ -5,7 +5,6 @@
 ![PID Mechanism Block Diagram](pid-mechanism.png)
 *Figure: Block diagram of the PID control feedback loop.*
 
-A PID (Proportional-Integral-Derivative) controller is a feedback control loop mechanism widely used in industrial control systems. The controller continuously calculates an error value $e(t)$ as the difference between a desired setpoint $r(t)$ and a measured process variable $y(t)$. The controller applies a correction based on proportional, integral, and derivative terms:
 
 A PID (Proportional-Integral-Derivative) controller is a feedback control loop mechanism widely used in industrial control systems. The controller continuously calculates an error value $e(t)$ as the difference between a desired setpoint $r(t)$ and a measured process variable $y(t)$. The controller applies a correction based on proportional, integral, and derivative terms:
 
@@ -42,9 +41,6 @@ The integral term increases convergence speed and reduces steady-state error. If
 
 ![PID Wiring Schematic](pid-wiring.png)
 *Figure: Physical wiring schematic for the PID controller system.*
-
-![PID Controller Schematic.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/6eed0180-51e9-457f-9105-0dc87954e9f8/0ae676a1-7b4c-437e-a0d8-b2c24c101797/PID_Controller_Schematic.jpg)
-
 ---
 
 ## Explanation of Sierra Mass Flow Controller (MFC)
@@ -70,8 +66,6 @@ Where:
 - $\Delta H$ = heat transferred
 
 Thus, the mass flow rate $\mu$ is proportional to the temperature difference between the coils. The MFC uses an electromagnetic valve (solenoid) to control flow: current through the solenoid generates a magnetic field, actuating a plunger to increase or decrease flow.
-
-![Screen Shot 2024-07-05 at 3.37.34 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6eed0180-51e9-457f-9105-0dc87954e9f8/1d3adeba-3abe-40cc-97b1-bb0c74bc1c39/Screen_Shot_2024-07-05_at_3.37.34_PM.png)
 
 For more details, see the [Sierra Capillary Thermal User's Guide](https://www.sierrainstruments.com/userfiles/file/wp-sierra-capillary-thermal-users-guide.pdf).
 
